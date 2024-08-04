@@ -5,12 +5,12 @@ plugins {
 }
 
 group = 'com.hackathon'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0-SNAPSHOT'
 
 java.sourceCompatibility = '17'
 
 bootRun {
-    environment SPRING_PROFILES_ACTIVE: environment.SPRING_PROFILES_ACTIVE ?: 'local'
+    environment SPRING_PROFILES_ACTIVE: environment.SPRING_PROFILES_ACTIVE ?: 'dev'
 }
 
 repositories {
@@ -28,7 +28,6 @@ dependencies {
     testCompileOnly('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
     developmentOnly('org.springframework.boot:spring-boot-devtools')
-    developmentOnly('org.springframework.boot:spring-boot-docker-compose')
 
     implementation 'org.junit.jupiter:junit-jupiter:5.10.2'
     implementation 'org.mockito:mockito-junit-jupiter:5.11.0'
