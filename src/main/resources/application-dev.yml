@@ -1,0 +1,19 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://${MONGODB_USER}:${MONGODB_PASSWORD}@floodrisk.arwgyrb.mongodb.net/${MONGODB_DATABASE}?retryWrites=true&w=majority
+      auto-index-creation: true
+
+error:
+  handling:
+    http-status-in-json-response: true
+    exception-logging: NO_LOGGING
+    full-stacktrace-http-statuses: 5xx
+    log-levels:
+      5xx: ERROR
+    codes:
+      AreaRiscoEnchenteLatitudeUnique: AREA_RISCO_ENCHENTE_LATITUDE_UNIQUE
+      AreaRiscoEnchenteLongitudeUnique: AREA_RISCO_ENCHENTE_LONGITUDE_UNIQUE
+
+springdoc:
+  pathsToMatch: /, /api/**
