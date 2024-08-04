@@ -1,27 +1,105 @@
-# Floodrisk
+# 🌊🛑 FloodRisk API
 
-## Desenvolvimento
+## Descrição
 
-Para iniciar a aplicação, use o comando `docker compose up` . O aplicativo se conectará aos serviços contidos. É necessário que
-[Docker](https://www.docker.com/get-started/) esteja disponível no sistema atual.
+A aplicação "Áreas de Risco de Enchentes" é uma API desenvolvida para gerenciar informações sobre áreas de risco de enchentes. 
+A API permite consultar, adicionar, atualizar e remover áreas de risco de enchentes.
 
-Durante o desenvolvimento, é recomendável usar o perfil `local`. No IntelliJ, adicione `-Dspring.profiles.active=local` 
-nas opções da VM da Configuração de Execução após habilitar essa propriedade em "Edit configurations". Crie seu próprio 
-arquivo `application-local.yml` para substituir as configurações para desenvolvimento.
+O projeto está hospedado no [Fly.io](https://floodrisk.fly.dev/swagger-ui/index.html#/).
 
-O Lombok deve ser suportado pelo seu IDE. Para o IntelliJ, instale o plugin Lombok e habilite o processamento de anotações -
-[learn more](https://bootify.io/next-steps/spring-boot-with-lombok.html).
+## Tecnologias
 
-Após iniciar a aplicação, ela estará acessível em `localhost:8080`.
+- **Java:** 17
+- **Gradle:** 8.8
+- **Spring Boot:** 3.3.2
 
-## Docker Compose e MongoDB
+## Endpoints
 
-Este projeto utiliza o Docker Compose para iniciar uma imagem do MongoDB localmente. Certifique-se de ter o Docker 
-instalado e execute docker compose up para iniciar a aplicação e o banco de dados MongoDB. A imagem do MongoDB é 
-necessária para o funcionamento do projeto localmente.
+A aplicação expõe os seguintes endpoints:
 
-## Leituras adicionais
+### 1. **Obter uma área de risco de enchente por ID**
 
-* [Gradle user manual](https://docs.gradle.org/)  
-* [Spring Boot reference](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)  
-* [Spring Data MongoDB reference](https://docs.spring.io/spring-data/mongodb/reference/)
+- **Método:** GET
+- **URL:** `/api/areas-riscos-enchente/{id}`
+- **Descrição:** Retorna os detalhes de uma área de risco de enchente específica identificada pelo seu ID.
+
+### 2. **Atualizar uma área de risco de enchente por ID**
+
+- **Método:** PUT
+- **URL:** `/api/areas-riscos-enchente/{id}`
+- **Descrição:** Atualiza os detalhes de uma área de risco de enchente específica identificada pelo seu ID.
+
+### 3. **Remover uma área de risco de enchente por ID**
+
+- **Método:** DELETE
+- **URL:** `/api/areas-riscos-enchente/{id}`
+- **Descrição:** Remove uma área de risco de enchente específica identificada pelo seu ID.
+
+### 4. **Obter todas as áreas de risco de enchente**
+
+- **Método:** GET
+- **URL:** `/api/areas-riscos-enchente`
+- **Descrição:** Retorna uma lista de todas as áreas de risco de enchente cadastradas na aplicação.
+
+### 5. **Adicionar uma nova área de risco de enchente**
+
+- **Método:** POST
+- **URL:** `/api/areas-riscos-enchente`
+- **Descrição:** Adiciona uma nova área de risco de enchente à aplicação.
+
+## Configuração
+
+Para configurar o projeto localmente, siga as instruções abaixo:
+
+1. **Clone o Repositório**
+
+   ```bash
+   git clone https://github.com/Flood-Risk/FloodRiskAPI.git
+   ```
+
+2. **Navegue até o Diretório do Projeto** 📂
+
+   ```bash
+   cd FloodRiskAPI
+   ```
+
+3. **Configure as Dependências** 🔧
+
+   Certifique-se de ter o Gradle 8.8 e o JDK 17 instalados. Você pode usar o Gradle Wrapper incluído no projeto:
+
+   ```bash
+   ./gradlew build
+    ```
+
+4. **Defina as Variáveis de Ambiente** 🌐
+
+   Defina as seguintes variáveis de ambiente para configurar o acesso ao banco de dados MongoDB:
+
+   ```bash
+   MONGODB_USER=seu_usuario
+   MONGODB_PASSWORD=sua_senha
+   MONGODB_DATABASE=nome_do_banco
+   ```
+   
+5. **Execute o Projeto** 🚀
+
+    ```bash
+   ./gradlew bootRun
+   ```
+
+   O aplicativo será iniciado e estará disponível na URL padrão: http://localhost:8080.
+
+## Documentação da API
+
+A documentação da API está disponível no Swagger UI. Acesse a URL do Swagger UI para explorar os endpoints e testar 
+as operações da API.
+
+http://localhost:8080/swagger-ui.html
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você deseja colaborar, por favor, faça um fork do repositório e envie um pull request com suas melhorias ou correções.
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](https://github.com/Flood-Risk/FloodRiskAPI/blob/main/LICENSE).
