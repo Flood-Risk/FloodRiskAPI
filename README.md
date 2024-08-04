@@ -1,17 +1,38 @@
-# 🌊🛑 FloodRisk API
+<p align="center">
+  <a href="https://floodrisk.fly.dev/swagger-ui/index.html#"><img src="https://github.com/user-attachments/assets/73768823-c6dd-4708-b72d-2e0dd3e6a0e1"/></a>
+</p>
 
-## Descrição
+<h4 align="center">
+  🌊 FloodRiskAPI - API de áreas de riscos de enchente no Brasil ⚠️
+</h4>
 
-A aplicação "Áreas de Risco de Enchentes" é uma API desenvolvida para gerenciar informações sobre áreas de risco de enchentes. 
+<p align="center">
+ <a href="#-sobre">Sobre</a> •
+ <a href="#endpoints">Endpoints</a> •
+ <a href="#configuração">Configuração</a> •
+ <a href="#%EF%B8%8F-autor">Autor</a>
+</p>
+
+## 💻 Sobre
+
+Este repositório foi criado para colocar o projeto "Áreas de risco de enchentes no Brasil", que é uma API desenvolvida para gerenciar informações sobre áreas de risco de enchentes. 
+
 A API permite consultar, adicionar, atualizar e remover áreas de risco de enchentes.
 
-O projeto está hospedado no [Fly.io](https://floodrisk.fly.dev/swagger-ui/index.html#/).
+<h3 align="center">
+⚙️ Tecnologias utilizadas
 
-## Tecnologias
+<p>&nbsp;</p>
+  <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white"/>
+  <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white"/>
+  <img src="https://img.shields.io/badge/mongodb-%47A248.svg?style=for-the-badge&logo=mongodb&logoColor=white"/>
+  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io/badge/junit5-%25A162.svg?style=for-the-badge&logo=junit5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/swagger-%85EA2D.svg?style=for-the-badge&logo=swagger&logoColor=white"/>
+</h3>
 
-- **Java:** 17
-- **Gradle:** 8.8
-- **Spring Boot:** 3.3.2
+---
 
 ## Endpoints
 
@@ -103,3 +124,17 @@ Contribuições são bem-vindas! Se você deseja colaborar, por favor, faça um 
 ## Licença
 
 Este projeto está licenciado sob a [Licença MIT](https://github.com/Flood-Risk/FloodRiskAPI/blob/main/LICENSE).
+
+---
+
+## ✒️ Autor
+
+| [<img src="https://avatars.githubusercontent.com/u/75590326?v=4" width=115 > <br> <sub> Bruno Machado </sub>](https://github.com/brunomdrrosa) |
+| :--------------------------------------------------------------------------------------------------------------------------------------------: |
+
+<h2 >Entre em contato 🤙🏽</h2>
+
+<div align="center">
+<a href="https://linkedin.com/in/bruno-machado-da-rosa/" target="_blank"><img src="https://img.shields.io/badge/Bruno Machado da Rosa-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt=""></a>
+<a href="mailto:brunomdr46@gmail.com" target="_blank"><img src="https://img.shields.io/badge/brunomdr46@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt=""></a>
+</div>
