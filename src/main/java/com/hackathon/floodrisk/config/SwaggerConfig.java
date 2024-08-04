@@ -25,9 +25,9 @@ public class SwaggerConfig {
     public OpenAPI openApiSpec() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("API de áreas de riscos de enchente no Brasil")
-                        .version("1.0.0")
-                        .description("API de áreas de riscos de enchente no Brasil"))
+                        .title("API de áreas de riscos de alagamento no Brasil")
+                        .version("1.1.0")
+                        .description("API de áreas de riscos de alagamento no Brasil"))
                 .components(new Components()
                         .addSchemas("ApiErrorResponse", new ObjectSchema()
                                 .addProperty("status", new IntegerSchema())

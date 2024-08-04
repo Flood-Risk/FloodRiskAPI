@@ -11,9 +11,6 @@ error:
     full-stacktrace-http-statuses: 5xx
     log-levels:
       5xx: ERROR
-    codes:
-      AreaRiscoEnchenteLatitudeUnique: AREA_RISCO_ENCHENTE_LATITUDE_UNIQUE
-      AreaRiscoEnchenteLongitudeUnique: AREA_RISCO_ENCHENTE_LONGITUDE_UNIQUE
 
 springdoc:
   pathsToMatch: /, /api/**

@@ -1,18 +1,18 @@
 package com.hackathon.floodrisk.mocks;
 
-import com.hackathon.floodrisk.api.AreaRiscoEnchenteInputDTO;
-import com.hackathon.floodrisk.api.AreaRiscoEnchenteOutputDTO;
-import com.hackathon.floodrisk.domain.AreaRiscoEnchente;
-import com.hackathon.floodrisk.model.AreaRiscoEnchenteBO;
+import com.hackathon.floodrisk.api.AreaRiscoAlagamentoInputDTO;
+import com.hackathon.floodrisk.api.AreaRiscoAlagamentoOutputDTO;
+import com.hackathon.floodrisk.domain.AreaRiscoAlagamento;
+import com.hackathon.floodrisk.service.AreaRiscoAlagamentoBO;
 
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.util.List;
 
-public class AreaRiscoEnchentesMock {
+public class AreaRiscoAlagamentosMock {
 
-    public static AreaRiscoEnchenteBO buildAreaRiscoEnchenteBO() {
-        AreaRiscoEnchenteBO bo = new AreaRiscoEnchenteBO();
+    public static AreaRiscoAlagamentoBO buildAreaRiscoAlagamentoBO() {
+        AreaRiscoAlagamentoBO bo = new AreaRiscoAlagamentoBO();
         bo.setId(1L);
         bo.setNome("Ilha das Flores");
         bo.setDescricao("Localizada próxima ao delta do Jacuí, essa região enfrenta riscos frequentes de inundação, " +
@@ -26,8 +26,8 @@ public class AreaRiscoEnchentesMock {
         return bo;
     }
 
-    public static AreaRiscoEnchenteOutputDTO buildAreaRiscoEnchenteOutputDTO() {
-        AreaRiscoEnchenteOutputDTO outputDTO = new AreaRiscoEnchenteOutputDTO();
+    public static AreaRiscoAlagamentoOutputDTO buildAreaRiscoAlagamentoOutputDTO() {
+        AreaRiscoAlagamentoOutputDTO outputDTO = new AreaRiscoAlagamentoOutputDTO();
         outputDTO.setId(1L);
         outputDTO.setNome("Ilha das Flores");
         outputDTO.setDescricao("Localizada próxima ao delta do Jacuí, essa região enfrenta riscos frequentes de inundação, " +
@@ -41,8 +41,8 @@ public class AreaRiscoEnchentesMock {
         return outputDTO;
     }
 
-    public static AreaRiscoEnchenteInputDTO buildAreaRiscoEnchenteInputDTO() {
-        AreaRiscoEnchenteInputDTO input = new AreaRiscoEnchenteInputDTO();
+    public static AreaRiscoAlagamentoInputDTO buildAreaRiscoAlagamentoInputDTO() {
+        AreaRiscoAlagamentoInputDTO input = new AreaRiscoAlagamentoInputDTO();
         input.setNome("Ilha das Flores");
         input.setDescricao("Localizada próxima ao delta do Jacuí, essa região enfrenta riscos frequentes de inundação, " +
                 "especialmente durante chuvas intensas e períodos de cheia dos rios.");
@@ -55,8 +55,8 @@ public class AreaRiscoEnchentesMock {
         return input;
     }
 
-    public static AreaRiscoEnchente buildAreaRiscoEnchente() {
-        AreaRiscoEnchente entity = new AreaRiscoEnchente();
+    public static AreaRiscoAlagamento buildAreaRiscoAlagamento() {
+        AreaRiscoAlagamento entity = new AreaRiscoAlagamento();
         entity.setId(1L);
         entity.setNome("Ilha das Flores");
         entity.setDescricao("Localizada próxima ao delta do Jacuí, essa região enfrenta riscos frequentes de inundação, " +

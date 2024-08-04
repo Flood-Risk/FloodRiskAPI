@@ -1,11 +1,11 @@
-package com.hackathon.floodrisk.model;
+package com.hackathon.floodrisk.api;
 
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class AreaRiscoEnchenteBO {
+public class AreaRiscoAlagamentoOutputDTO {
     private Long id;
     private String nome;
     private String descricao;

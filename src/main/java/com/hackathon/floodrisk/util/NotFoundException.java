@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class NotFoundException extends RuntimeException {
 
     public NotFoundException(Long id) {
-        super("Não encontrado área de risco de enchente com o ID: " + id);
+        super("Não encontrado área de risco de alagamento com o ID: " + id);
     }
 
 }

@@ -1,13 +1,13 @@
 package com.hackathon.floodrisk.api;
 
-import com.hackathon.floodrisk.model.AreaRiscoEnchenteBO;
+import com.hackathon.floodrisk.service.AreaRiscoAlagamentoBO;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AreaRiscoEnchenteApiConverter {
+public class AreaRiscoAlagamentoApiConverter {
 
-    public AreaRiscoEnchenteOutputDTO toOutputDTO(AreaRiscoEnchenteBO dto) {
-        AreaRiscoEnchenteOutputDTO output = new AreaRiscoEnchenteOutputDTO();
+    public AreaRiscoAlagamentoOutputDTO toOutputDTO(AreaRiscoAlagamentoBO dto) {
+        AreaRiscoAlagamentoOutputDTO output = new AreaRiscoAlagamentoOutputDTO();
         output.setId(dto.getId());
         output.setNome(dto.getNome());
         output.setCidade(dto.getCidade());

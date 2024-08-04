@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import java.util.List;
 
 @Data
-public class AreaRiscoEnchenteInputDTO {
+public class AreaRiscoAlagamentoInputDTO {
     @NotNull
     @Size(max = 255)
     private String nome;

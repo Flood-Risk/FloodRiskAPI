@@ -2,8 +2,8 @@
 
 ## Descrição
 
-A aplicação "Áreas de Risco de Enchentes" é uma API desenvolvida para gerenciar informações sobre áreas de risco de enchentes. 
-A API permite consultar, adicionar, atualizar e remover áreas de risco de enchentes.
+A aplicação "Áreas de risco de alagamentos" é uma API desenvolvida para gerenciar informações sobre áreas de risco de alagamentos. 
+A API permite consultar, adicionar, atualizar e remover áreas de risco de alagamentos.
 
 O projeto está hospedado no [Fly.io](https://floodrisk.fly.dev/swagger-ui/index.html#/).
 
@@ -17,35 +17,35 @@ O projeto está hospedado no [Fly.io](https://floodrisk.fly.dev/swagger-ui/index
 
 A aplicação expõe os seguintes endpoints:
 
-### 1. **Obter uma área de risco de enchente por ID**
+### 1. **Obter uma área de risco de alagamento por ID**
 
 - **Método:** GET
-- **URL:** `/api/areas-riscos-enchente/{id}`
-- **Descrição:** Retorna os detalhes de uma área de risco de enchente específica identificada pelo seu ID.
+- **URL:** `/api/areas-riscos-alagamento/{id}`
+- **Descrição:** Retorna os detalhes de uma área de risco de alagamento específica identificada pelo seu ID.
 
-### 2. **Atualizar uma área de risco de enchente por ID**
+### 2. **Atualizar uma área de risco de alagamento por ID**
 
 - **Método:** PUT
-- **URL:** `/api/areas-riscos-enchente/{id}`
-- **Descrição:** Atualiza os detalhes de uma área de risco de enchente específica identificada pelo seu ID.
+- **URL:** `/api/areas-riscos-alagamento/{id}`
+- **Descrição:** Atualiza os detalhes de uma área de risco de alagamento específica identificada pelo seu ID.
 
-### 3. **Remover uma área de risco de enchente por ID**
+### 3. **Remover uma área de risco de alagamento por ID**
 
 - **Método:** DELETE
-- **URL:** `/api/areas-riscos-enchente/{id}`
-- **Descrição:** Remove uma área de risco de enchente específica identificada pelo seu ID.
+- **URL:** `/api/areas-riscos-alagamento/{id}`
+- **Descrição:** Remove uma área de risco de alagamento específica identificada pelo seu ID.
 
-### 4. **Obter todas as áreas de risco de enchente**
+### 4. **Obter todas as áreas de risco de alagamento**
 
 - **Método:** GET
-- **URL:** `/api/areas-riscos-enchente`
-- **Descrição:** Retorna uma lista de todas as áreas de risco de enchente cadastradas na aplicação.
+- **URL:** `/api/areas-riscos-alagamento`
+- **Descrição:** Retorna uma lista de todas as áreas de risco de alagamento cadastradas na aplicação.
 
-### 5. **Adicionar uma nova área de risco de enchente**
+### 5. **Adicionar uma nova área de risco de alagamento**
 
 - **Método:** POST
-- **URL:** `/api/areas-riscos-enchente`
-- **Descrição:** Adiciona uma nova área de risco de enchente à aplicação.
+- **URL:** `/api/areas-riscos-alagamento`
+- **Descrição:** Adiciona uma nova área de risco de alagamento à aplicação.
 
 ## Configuração
 

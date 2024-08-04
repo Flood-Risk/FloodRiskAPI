@@ -10,9 +10,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.OffsetDateTime;
 import java.util.List;
 
-@Document("areaRiscoEnchentes")
+@Document("areaRiscoAlagamentos")
 @Data
-public class AreaRiscoEnchente {
+public class AreaRiscoAlagamento {
     @Id
     private Long id;
     private String nome;
