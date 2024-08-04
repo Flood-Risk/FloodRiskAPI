@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://floodrisk.fly.dev/swagger-ui/index.html#"><img src="https://github.com/user-attachments/assets/73768823-c6dd-4708-b72d-2e0dd3e6a0e1"/></a>
+  <a href="https://floodrisk.fly.dev/swagger-ui/index.html#"><img src="https://github.com/user-attachments/assets/46d00ea7-63c5-42aa-8432-5187796e2dd7"/></a>
 </p>
 
 <h4 align="center">
