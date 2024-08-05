@@ -10,7 +10,7 @@
  <a href="#-sobre">Sobre</a> •
  <a href="#endpoints">Endpoints</a> •
  <a href="#configuração">Configuração</a> •
- <a href="#%EF%B8%8F-autor">Autor</a>
+ <a href="#%EF%B8%8F-autores">Autores</a>
 </p>
 
 ## 💻 Sobre
@@ -127,10 +127,10 @@ Este projeto está licenciado sob a [Licença MIT](https://github.com/Flood-Risk
 
 ---
 
-## ✒️ Autor
+## ✒️ Autores
 
-| [<img src="https://avatars.githubusercontent.com/u/75590326?v=4" width=115 > <br> <sub> Bruno Machado </sub>](https://github.com/brunomdrrosa) |
-| :--------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://avatars.githubusercontent.com/u/75590326?v=4" width=115 > <br> <sub> Bruno Machado </sub>](https://github.com/brunomdrrosa) | [<img src="https://avatars.githubusercontent.com/u/85200529?v=4" width=115 > <br> <sub> Rian Oliveira </sub>](https://github.com/riandeoliveira) |
+| :--------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------: |
 
 <h2 >Entre em contato 🤙🏽</h2>
 
