@@ -49,8 +49,10 @@ public class AreaRiscoAlagamentoService {
 
     @Transactional
     public void delete(final Long id) {
-        areaRiscoAlagamentoRepository.findById(id).orElseThrow(() -> new NotFoundException(id));
-        areaRiscoAlagamentoRepository.deleteById(id);
+        AreaRiscoAlagamento areaRiscoAlagamento = areaRiscoAlagamentoRepository.findById(id)
+                .orElseThrow(() -> new NotFoundException(id));
+
+        areaRiscoAlagamentoRepository.delete(areaRiscoAlagamento);
     }
 
 }

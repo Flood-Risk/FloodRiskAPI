@@ -41,7 +41,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar no body da resposta uma lista com todas areas de riscos de alagamento")
-    public void testGetAllAreaRiscoAlagamentos() throws Exception {
+    void testGetAllAreaRiscoAlagamentos() throws Exception {
         when(areaRiscoAlagamentoService.findAll()).thenReturn(List.of(buildAreaRiscoAlagamentoBO()));
         when(converter.toOutputDTO(buildAreaRiscoAlagamentoBO())).thenReturn(buildAreaRiscoAlagamentoOutputDTO());
 
@@ -64,7 +64,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar no body da resposta area de risco de alagamento buscada por ID")
-    public void testGetAreaRiscoAlagamento() throws Exception {
+    void testGetAreaRiscoAlagamento() throws Exception {
         when(areaRiscoAlagamentoService.get(ID_AREA_RISCO_ALAGAMENTO)).thenReturn(buildAreaRiscoAlagamentoBO());
         when(converter.toOutputDTO(buildAreaRiscoAlagamentoBO())).thenReturn(buildAreaRiscoAlagamentoOutputDTO());
 
@@ -86,7 +86,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve adicionar area de risco de alagamento")
-    public void testCreateAreaRiscoAlagamento() throws Exception {
+    void testCreateAreaRiscoAlagamento() throws Exception {
         String jsonInputDTO = objectMapper.writeValueAsString(buildAreaRiscoAlagamentoInputDTO());
 
         when(areaRiscoAlagamentoService.create(any(AreaRiscoAlagamentoInputDTO.class))).thenReturn(buildAreaRiscoAlagamentoBO());
@@ -111,7 +111,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve atualizar area de risco de alagamento por ID")
-    public void testUpdateAreaRiscoAlagamento() throws Exception {
+    void testUpdateAreaRiscoAlagamento() throws Exception {
         String jsonInputDTO = objectMapper.writeValueAsString(buildAreaRiscoAlagamentoInputDTO());
 
         when(areaRiscoAlagamentoService.update(eq(ID_AREA_RISCO_ALAGAMENTO), any(AreaRiscoAlagamentoInputDTO.class))).thenReturn(buildAreaRiscoAlagamentoBO());
@@ -137,7 +137,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve remover area de risco de alagamento por ID")
-    public void testDeleteAreaRiscoAlagamento() throws Exception {
+    void testDeleteAreaRiscoAlagamento() throws Exception {
         doNothing().when(areaRiscoAlagamentoService).delete(ID_AREA_RISCO_ALAGAMENTO);
 
         mockMvc.perform(delete("/api/areas-riscos-alagamento/{id}", ID_AREA_RISCO_ALAGAMENTO)
@@ -147,7 +147,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve enviar NotFoundException ao tentar buscar area de risco de alagamento inexistente")
-    public void testGetAreaRiscoAlagamentoNotFound() throws Exception {
+    void testGetAreaRiscoAlagamentoNotFound() throws Exception {
         when(areaRiscoAlagamentoService.get(ID_NAO_EXISTENTE_AREA_RISCO_ALAGAMENTO)).thenThrow(new NotFoundException(ID_NAO_EXISTENTE_AREA_RISCO_ALAGAMENTO));
 
         mockMvc.perform(get("/api/areas-riscos-alagamento/{id}", ID_NAO_EXISTENTE_AREA_RISCO_ALAGAMENTO)
@@ -161,7 +161,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve enviar NotFoundException ao tentar atualizar area de risco de alagamento inexistente")
-    public void testUpdateRiscoAlagamentoNotFound() throws Exception {
+    void testUpdateRiscoAlagamentoNotFound() throws Exception {
         when(areaRiscoAlagamentoService.update(eq(ID_NAO_EXISTENTE_AREA_RISCO_ALAGAMENTO), any(AreaRiscoAlagamentoInputDTO.class)))
                 .thenThrow(new NotFoundException(ID_NAO_EXISTENTE_AREA_RISCO_ALAGAMENTO));
 
@@ -177,7 +177,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve enviar NotFoundException ao tentar deletar area de risco de alagamento inexistente")
-    public void testDeleteRiscoAlagamentoNotFound() throws Exception {
+    void testDeleteRiscoAlagamentoNotFound() throws Exception {
         doThrow(new NotFoundException(ID_NAO_EXISTENTE_AREA_RISCO_ALAGAMENTO)).when(areaRiscoAlagamentoService).delete(ID_NAO_EXISTENTE_AREA_RISCO_ALAGAMENTO);
 
         mockMvc.perform(delete("/api/areas-riscos-alagamento/{id}", ID_NAO_EXISTENTE_AREA_RISCO_ALAGAMENTO)
@@ -191,7 +191,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com nome nulo")
-    public void testCreateSemNomeArea() throws Exception {
+    void testCreateSemNomeArea() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setNome(null);
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -214,7 +214,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com nome com mais de 255 caracteres")
-    public void testCreateComNomeAreaAcimaDe255Caracteres() throws Exception {
+    void testCreateComNomeAreaAcimaDe255Caracteres() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setNome("A".repeat(256));
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -237,7 +237,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com descricao nulo")
-    public void testCreateSemDescricaoArea() throws Exception {
+    void testCreateSemDescricaoArea() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setDescricao(null);
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -260,7 +260,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com descricao com mais de 255 caracteres")
-    public void testCreateComDescricaoAreaAcimaDe255Caracteres() throws Exception {
+    void testCreateComDescricaoAreaAcimaDe255Caracteres() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setDescricao("A".repeat(256));
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -283,7 +283,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com estado nulo")
-    public void testCreateSemEstadoArea() throws Exception {
+    void testCreateSemEstadoArea() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setEstado(null);
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -306,7 +306,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com estado com mais de 255 caracteres")
-    public void testCreateComEstadoAcimaDe255Caracteres() throws Exception {
+    void testCreateComEstadoAcimaDe255Caracteres() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setEstado("A".repeat(256));
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -329,7 +329,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com cidade nulo")
-    public void testCreateSemCidadeArea() throws Exception {
+    void testCreateSemCidadeArea() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setCidade(null);
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -352,7 +352,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com cidade com mais de 255 caracteres")
-    public void testCreateComCidadeAcimaDe255Caracteres() throws Exception {
+    void testCreateComCidadeAcimaDe255Caracteres() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setCidade("A".repeat(256));
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -375,7 +375,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com latitude nulo")
-    public void testCreateSemLatitudeArea() throws Exception {
+    void testCreateSemLatitudeArea() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setLatitude(null);
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -398,7 +398,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com latitude com mais de 255 caracteres")
-    public void testCreateComLatitudeAcimaDe255Caracteres() throws Exception {
+    void testCreateComLatitudeAcimaDe255Caracteres() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setLatitude("A".repeat(256));
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -421,7 +421,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com longitude nulo")
-    public void testCreateSemLongitudeArea() throws Exception {
+    void testCreateSemLongitudeArea() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setLongitude(null);
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -444,7 +444,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com longitude com mais de 255 caracteres")
-    public void testCreateComLongitudeAcimaDe255Caracteres() throws Exception {
+    void testCreateComLongitudeAcimaDe255Caracteres() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setLongitude("A".repeat(256));
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -467,7 +467,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com nivel de risco menor que 1")
-    public void testCreateNivelRiscoAreaMenorQueUm() throws Exception {
+    void testCreateNivelRiscoAreaMenorQueUm() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setNivelRisco(0);
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -490,7 +490,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com nivel de risco maior que 5")
-    public void testCreateNivelRiscoAreaMaiorQueCinco() throws Exception {
+    void testCreateNivelRiscoAreaMaiorQueCinco() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setNivelRisco(6);
         String jsonInputDTO = objectMapper.writeValueAsString(input);
@@ -513,7 +513,7 @@ class AreaRiscoAlagamentoRestIntegrationTest {
 
     @Test
     @DisplayName("Deve retornar erro ao enviar area de alagamento com historico de dados com mais de 255 caracteres")
-    public void testCreateComHistoricoDadosAcimaDe255Caracteres() throws Exception {
+    void testCreateComHistoricoDadosAcimaDe255Caracteres() throws Exception {
         AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         input.setHistoricoDados(List.of("A".repeat(256)));
         String jsonInputDTO = objectMapper.writeValueAsString(input);

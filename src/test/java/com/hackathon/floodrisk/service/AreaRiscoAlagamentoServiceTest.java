@@ -99,7 +99,7 @@ class AreaRiscoAlagamentoServiceTest {
         service.delete(ID_AREA_RISCO_ALAGAMENTO);
 
         verify(repository, times(1)).findById(ID_AREA_RISCO_ALAGAMENTO);
-        verify(repository, times(1)).deleteById(ID_AREA_RISCO_ALAGAMENTO);
+        verify(repository, times(1)).delete(buildAreaRiscoAlagamento());
     }
 
     @Test
@@ -115,9 +115,10 @@ class AreaRiscoAlagamentoServiceTest {
     @Test
     @DisplayName("Deve enviar NotFoundException ao atualizar area de risco de alagamento com ID inexistente")
     void updateNotFoundException() {
+        AreaRiscoAlagamentoInputDTO input = buildAreaRiscoAlagamentoInputDTO();
         when(repository.findById(ID_AREA_RISCO_ALAGAMENTO)).thenReturn(Optional.empty());
 
-        assertThrows(NotFoundException.class, () -> service.update(ID_AREA_RISCO_ALAGAMENTO, buildAreaRiscoAlagamentoInputDTO()));
+        assertThrows(NotFoundException.class, () -> service.update(ID_AREA_RISCO_ALAGAMENTO, input));
         verify(repository, times(1)).findById(ID_AREA_RISCO_ALAGAMENTO);
         verify(converter, never()).toEntity(any(AreaRiscoAlagamentoInputDTO.class), any(AreaRiscoAlagamento.class));
         verify(repository, never()).save(any(AreaRiscoAlagamento.class));
