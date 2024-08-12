@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://floodrisk.fly.dev/swagger-ui/index.html#"><img src="https://github.com/user-attachments/assets/73768823-c6dd-4708-b72d-2e0dd3e6a0e1"/></a>
+  <a href="https://floodrisk.fly.dev/swagger-ui/index.html#"><img src="https://github.com/user-attachments/assets/46d00ea7-63c5-42aa-8432-5187796e2dd7"/></a>
 </p>
 
 <h4 align="center">
@@ -10,7 +10,7 @@
  <a href="#-sobre">Sobre</a> •
  <a href="#endpoints">Endpoints</a> •
  <a href="#configuração">Configuração</a> •
- <a href="#%EF%B8%8F-autor">Autor</a>
+ <a href="#%EF%B8%8F-autores">Autores</a>
 </p>
 
 ## 💻 Sobre
@@ -127,10 +127,10 @@ Este projeto está licenciado sob a [Licença MIT](https://github.com/Flood-Risk
 
 ---
 
-## ✒️ Autor
+## ✒️ Autores
 
-| [<img src="https://avatars.githubusercontent.com/u/75590326?v=4" width=115 > <br> <sub> Bruno Machado </sub>](https://github.com/brunomdrrosa) |
-| :--------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://avatars.githubusercontent.com/u/75590326?v=4" width=115 > <br> <sub> Bruno Machado </sub>](https://github.com/brunomdrrosa) | [<img src="https://avatars.githubusercontent.com/u/85200529?v=4" width=115 > <br> <sub> Rian Oliveira </sub>](https://github.com/riandeoliveira) |
+| :--------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------: |
 
 <h2 >Entre em contato 🤙🏽</h2>
 
