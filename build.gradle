@@ -1,7 +1,22 @@
 plugins {
+    id "org.sonarqube" version "5.0.0.4638"
     id 'org.springframework.boot' version '3.3.2'
     id 'io.spring.dependency-management' version '1.1.6'
     id 'java'
+    id 'jacoco'
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "FloodRisk"
+        property "sonar.host.url", "http://localhost:9000"
+        property "sonar.token", "sqp_b2daf5f693ad2ac6a9a46f1acb57757efc37dcd2"
+        property "sonar.junit.reportPaths", "build/test-results/test"
+    }
+}
+
+jacoco {
+    toolVersion = '0.8.8'
 }
 
 group = 'com.hackathon'
@@ -34,6 +49,22 @@ dependencies {
     testImplementation 'org.mockito:mockito-core:5.11.0'
     testImplementation 'org.mockito:mockito-junit-jupiter:5.11.0'
     testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
+    reports {
+        junitXml.destination = file("${buildDir}/test-results/test")
+        html.destination = file("${buildDir}/reports/tests/test")
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
+        html.required = true
+    }
 }
 
 tasks.withType(Test) {
